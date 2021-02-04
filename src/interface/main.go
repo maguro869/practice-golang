@@ -44,6 +44,9 @@ type Men interface {
 	Sing(lyrics string)
 }
 
+// emptyInterface 空のinterface
+type emptyInterface interface {}
+
 
 func main() {
 	mark := Student{Human{"Mark", 25, "222-222-YYYY"}, "MIT", 0.00}
@@ -73,4 +76,13 @@ func main() {
 		value.SayHi()
 	}
 
+	// 空のinterfaceを使う
+	var ei emptyInterface
+	num := 5
+	str := "abc"
+
+	ei = num
+	fmt.Printf("EmptyInterface: %v\n", ei)
+	ei = str
+	fmt.Printf("EmptyInterface: %v\n", ei)
 }
