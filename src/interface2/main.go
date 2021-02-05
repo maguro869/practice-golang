@@ -28,6 +28,7 @@ func main() {
 	list[1] = "Hello"	// これはstring
 	list[2] = Person{"Dennis", 70}	// これはPerson
 
+	// "Comma-okアサーション"で、型を判断する
 	for index, element := range list {
 		if value, ok := element.(int); ok {
 			fmt.Printf("list[%d] is an int and its value is %d\n", index, value)
