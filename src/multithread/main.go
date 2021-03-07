@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"runtime"
+	"time"
 ) 
 
 func say(s string) {
@@ -14,5 +15,6 @@ func say(s string) {
 
 func main() {
 	go say("world")	// 新しいGorutines
-	say("hello")	// 今のGorutines
+	go say("hello")	// 今のGorutines
+	time.Sleep(100 * time.Millisecond)
 }
